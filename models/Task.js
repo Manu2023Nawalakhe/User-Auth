@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import User from "./User";
+import User from "./User.js";
 
 const TaskSchema = new mongoose.Schema({
   title: {
@@ -10,7 +10,7 @@ const TaskSchema = new mongoose.Schema({
     type: String,
   },
   User: {
-    type: mongoose.Schema.Type.ObjectId,
+    type: mongoose.Schema.Types.ObjectId,
     ref: "User",
   },
 });
